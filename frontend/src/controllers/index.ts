@@ -1,0 +1,16 @@
+export { default as VerifierCountController } from "./VerifierCount";
+export { default as VerificationRecordCountController } from "./VerificationRecordCount";
+export { default as VerificationRecordItemController } from "./VerificationRecordItem";
+export { default as AddVerificationModalController } from "./AddVerificationModal";
+export { default as SearchVerifierFromAddressController } from "./SearchVerifiers";
+export { default as SearchVerificationRecordsController } from "./SearchVerificationRecords";
+export { default as VerifierItemController } from "./VerifierItem";
+export { default as UpdateVerifierModalController } from "./UpdateVerifierModal";
+export { default as AddTrustedContract } from "./AddTrustedContract";
+export { default as AddTrustedContractModalController } from "./AddTrustedContractModal";
+export { default as SearchTrustedContractFromAddressController } from "./SearchTrustedContractFromAddress";
+export { default as TrustedContractItemController } from "./TrustedContractItem";
+export { default as AcceptNewDiplomaRequestController } from "./AcceptNewDiplomaRequest";
+export { default as ConsumeTokenController } from "./ConsumeToken";
+export { default as ShowPersonalNFTsController } from "./ShowPersonalNFTs";
+export { default as ShowPersonalNFTItemController } from "./ShowPersonalNFTItem";

@@ -1,0 +1,47 @@
+{console.log("View records: ", verificationRecords, verificationRecords?.[0])}
+        {(verificationRecords?.length && verificationRecords?.[0]) ?
+            <TableContainer>
+                <Table variant='simple' colorScheme='teal' size="sm">
+                    <TableCaption>Caption</TableCaption>
+                    <Thead>
+                        <Tr>
+                            <Th>UUID</Th>
+                            <Th>Verifier</Th>
+                            <Th>Subject</Th>
+                            <Th>Entry Time</Th>
+                            <Th>Expiration Time</Th>
+                            <Th>State</Th>
+                            <Th>Action</Th>
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+                        {verificationRecords.map((record, index) => {
+                            return <Tr key={index}>
+                                <Td>{record.uuid}</Td>
+                                <Td>{record.verifier}</Td>
+                                <Td>{record.subject}</Td>
+                                <Td>{record.entryTime.toString()}</Td>
+                                <Td>{record.expirationTime.toString()}</Td>
+                                <Td>{record.revoked ? "INVALID" : "VALID"}</Td>
+                                <Td>
+                                    <IconButton
+                                        colorScheme='red'
+                                        aria-label='Delete key'
+                                        size='sm'
+                                        icon={<FaTimes />}
+                                        mr='0.5em'
+                                    />
+                                    <IconButton
+                                        colorScheme='blue'
+                                        aria-label='Export key'
+                                        size='sm'
+                                        icon={<BiExport />}
+                                    />
+                                </Td>
+                            </Tr>
+                        })}
+                    </Tbody>
+                </Table>
+            </TableContainer>
+            : null
+        }
